@@ -1,7 +1,7 @@
 from flask import Flask
+from Routes.Images import ImgRoutes
 
 app = Flask(__name__)
+app.run(debug=True)
 
-@app.route("/", )
-def hello():
-    return "<h1>Hello</h1>"
+app.register_blueprint(ImgRoutes)
