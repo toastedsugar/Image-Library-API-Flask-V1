@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body class="container my-6">
+    <h1 class="is-size-2">Frontend for image libarary API</h1>
+
+    <!-- View an image -->
+    <div class="section is-size-4">
+        <h3>View an image</h3>
+        <form class="my-4" action="">
+
+        </form>
+    </div>
+
+    <!-- Add an image -->
+    <div class="section is-size-4">
+        <h3>Add an image</h3>
+        <form class="my-4" method="post" enctype="multipart/form-data" action="/v1/static/images">
+            <div id="file-upload" class="file has-name is-boxed">
+                <label class="file-label">
+                    <input class="file-input" type="file" name="file">
+                    <span class="file-cta">
+                        <span class="file-icon">
+                            <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                            Choose a file…
+                        </span>
+                    </span>
+                    <span class="file-name">
+                        Nothing Selected
+                    </span>
+                </label>
+            </div>
+            <button id="submit-image" class="button is-link is-light my-3">Submit</button>
+        </form>
+    </div>
+
+    <!-- Delete an image -->
+    <div class="section is-size-4">
+        <h3>Delete an image</h3>
+        <form class="my-4" action="">
+
+        </form>
+    </div>
+    <!--  -->
+
+    <script src="../static/js/scripts.js"></script>
+</body>
+
+</html>
