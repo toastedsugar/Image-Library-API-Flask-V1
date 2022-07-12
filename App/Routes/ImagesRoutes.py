@@ -9,9 +9,6 @@ ImgRoutes = Blueprint('ImgRoutes', __name__, template_folder='../templates')
 URL = "/v1/static/images"
 UPLOAD_FOLDER = 'static/img'
 ALLOWED_EXTENSIONS = {'jpg', 'png', 'webp'}
-DATABASE = '/database.db'
-
-#ImgRoutes.config['UPLOAD_FOLDER'] = 'static/img'
 
 def allowed_file(fileName):
     return '.' in fileName and \
