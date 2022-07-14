@@ -17,8 +17,11 @@ def init_db():
         os.remove(file.path)
         print('Removing ', file.path, flush=True)
 
-    cursor = databaseHelpers.get_db().cursor()
-    cursor.execute("CREATE TABLE ImgLibrary (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, path TEXT NOT NULL)")
-    print('Initializing db: ', databaseHelpers.query_db('SELECT name FROM sqlite_master WHERE type = "table"'), flush=True)
+    # cursor = databaseHelpers.get_db().cursor()
+
+    cursor = databaseHelpers.get_db()
+    cursor.execute("CREATE TABLE ImgLibrary (name TEXT NOT NULL, path TEXT NOT NULL)")
+    newDB_name = cursor.execute('SELECT name FROM sqlite_master WHERE type = "table"').fetchall()
+    print('Initializing db: ', newDB_name, flush=True)
 
 init_db()
